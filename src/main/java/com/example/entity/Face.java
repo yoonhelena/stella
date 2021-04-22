@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Entity
 @Getter @Setter
 @Builder @NoArgsConstructor @AllArgsConstructor
+@Table
 public class Face {
 
     @Id @GeneratedValue
