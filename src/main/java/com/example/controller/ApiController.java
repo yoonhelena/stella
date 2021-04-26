@@ -1,6 +1,7 @@
 package com.example.controller;
 
 import com.example.service.ApiService;
+import com.example.service.FaceService;
 import okhttp3.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +23,9 @@ public class ApiController {
 
     @Autowired
     private ApiService apiService;
+
+    @Autowired
+    private FaceService faceService;
 
     @GetMapping(value = "/face/detect/url")
     public ResponseEntity faceDetect() throws IOException {
@@ -45,5 +49,7 @@ public class ApiController {
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
     }
+
+
 
 }
