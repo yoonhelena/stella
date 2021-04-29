@@ -5,6 +5,8 @@ import com.example.repository.FaceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class FaceService {
 
@@ -15,4 +17,11 @@ public class FaceService {
         Face save = faceRepository.save(face);
         return save;
     }
+
+    public List<Face> findAll(){
+        List<Face> faceList = faceRepository.findAll();
+        return faceList;
+    }
+
+
 }
